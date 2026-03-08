@@ -9,6 +9,7 @@ export default function Header() {
           <Link href="/regions">Régions</Link>
           <Link href="/login" className="btn-secondary">Connexion</Link>
           <Link href="/register" className="btn-primary">S'inscrire</Link>
+          <Link href="/reservations" className="btn-primary">Réservations</Link>
         </div>
       </nav>
     </header>

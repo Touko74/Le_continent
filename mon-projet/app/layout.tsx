@@ -22,6 +22,7 @@ function Header() {
           <Link href="/regions">Régions</Link>
           <Link href="/login">Connexion</Link>
           <Link href="/register" className="btn-register">S'inscrire</Link>
+          <Link href="/reservations" className="btn-reservations">Réservations</Link>
         </div>
 
       </nav>
