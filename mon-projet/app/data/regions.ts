@@ -17,7 +17,7 @@ export const regions: Region[] = [
     activity: "Randonnée au Mont Ngaoundéré",
     dish: "Sauce foléré",
     images: {
-      capital: "/assets/regions/adamaoua/ngaoundere.jpeg",
+      capital: "/assets/regions/adamaoua/ngaoundere.jpg",
       activity: "/assets/regions/adamaoua/montagne.jpg",
       dish: "/assets/regions/adamaoua/sauce_folere.jpg"
     }
