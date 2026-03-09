@@ -6,25 +6,25 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// --- Composant Header Dynamique ---
+
 function Header() {
   const [user, setUser] = useState<any>(null);
   const router = useRouter();
 
-  // Fonction pour vérifier l'état de connexion
+
   const checkUser = () => {
     const savedUser = localStorage.getItem('user');
     setUser(savedUser ? JSON.parse(savedUser) : null);
   };
 
   useEffect(() => {
-    // Vérification initiale
+    
     checkUser();
 
-    // Écoute les changements de storage (connexion/déconnexion)
+ 
     window.addEventListener('storage', checkUser);
     
-    // Intervalle de sécurité pour mettre à jour l'interface en temps réel
+    
     const interval = setInterval(checkUser, 1000);
 
     return () => {
@@ -56,12 +56,12 @@ function Header() {
         </Link>
 
         <div className="nav-links">
-          {/* LIENS TOUJOURS VISIBLES */}
+         
           <Link href="/regions">Régions</Link>
           <Link href="/reservation">Réserver</Link>
           
           {user ? (
-            /* --- MENU SI CONNECTÉ --- */
+           
             <>
               <Link href="/profil" style={{ fontWeight: 'bold', color: 'var(--vert)' }}>
                 Mon Profil
@@ -84,7 +84,7 @@ function Header() {
   );
 }
 
-// --- Composant Footer ---
+
 function Footer() {
   return (
     <footer className="main-footer">
@@ -118,7 +118,7 @@ function Footer() {
   );
 }
 
-// --- Structure de base du projet ---
+
 export default function RootLayout({
   children,
 }: {

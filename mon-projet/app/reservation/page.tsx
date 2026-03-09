@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-// Liste des activités prédéfinies par région
+
 const activitiesByRegion: Record<string, string[]> = {
   "Littoral": ["Dégustation de Ndolé à Douala", "Visite des Chutes d'Ekom Nkam", "Balade sur les berges du Wouri"],
   "Sud-Ouest": ["Ascension du Mont Cameroun", "Détente sur les plages de Limbé", "Visite du jardin botanique"],
@@ -35,7 +35,7 @@ export default function ReservationPage() {
     setForm((prev) => ({
       ...prev,
       [name]: name === "people" ? Number(value) : value,
-      // Réinitialiser l'activité si la région change
+    
       ...(name === "region" ? { activite: "" } : {})
     }));
   };
@@ -71,7 +71,7 @@ export default function ReservationPage() {
           ))}
         </select>
 
-        {/* Liste des activités qui s'affiche seulement si une région est choisie */}
+       
         {form.region && (
           <>
             <label style={{ fontWeight: 600 }}>Activité disponible</label>
