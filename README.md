@@ -69,3 +69,8 @@ DB_USER=root
 DB_PASSWORD=Basketball74!
 DB_NAME=tourisme_cameroun
 DB_PORT=3306
+
+* Membres du groupe
+-Cellou
+-César
+-Christian
